@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
+using AhThawmDotNetCore.ConsoleApp.DapperExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -17,7 +18,7 @@ Console.WriteLine("Hello, World!");
 
 // Ctrl + .
 
-# region Read
+#region Read
 /*SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder();
 sqlConnectionStringBuilder.DataSource = ".";
 sqlConnectionStringBuilder.InitialCatalog = "TestDb";
@@ -51,7 +52,7 @@ foreach(DataRow dr in dt.Rows)
 */
 #endregion
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 
 //adoDotNetExample.Edit(27);
@@ -61,6 +62,16 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //adoDotNetExample.Update(33, "test title2", "test author2", "test content2");
 
-adoDotNetExample.Delete(31);
+//adoDotNetExample.Delete(31);
 
+DapperExample dapperExample = new DapperExample();
+//dapperExample.Read();
+
+//dapperExample.Edit(29);
+
+//dapperExample.Create("test dap title", "test dap author", "test dap content");
+
+//dapperExample.Update(30, "test dap title2", "test dap author2", "test dap content2");
+
+dapperExample.Delete(26);
 Console.ReadKey();
