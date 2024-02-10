@@ -59,8 +59,8 @@ AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
 //adoDotNetExample.Create("test title", "test author", "test content");
 
-adoDotNetExample.Update(33, "test title2", "test author2", "test content2");
+//adoDotNetExample.Update(33, "test title2", "test author2", "test content2");
 
-//adoDotNetExample.Delete(23);
+adoDotNetExample.Delete(31);
 
 Console.ReadKey();

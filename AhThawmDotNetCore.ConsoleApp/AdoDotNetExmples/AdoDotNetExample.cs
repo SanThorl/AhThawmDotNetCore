@@ -178,7 +178,7 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
             connection.Open();
 
             string query = @"DELETE FROM[dbo].[Tbl_Blog]
-                             WHERE BlogId = BlogId";
+                             WHERE BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
 
