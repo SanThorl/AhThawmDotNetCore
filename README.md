@@ -13,3 +13,4 @@ C#
 -asp.net web forms
 -asp.net core web nvc[x]
 -asp.net core web api[x]
+First Introduce to DA (DAY Feb 1)
