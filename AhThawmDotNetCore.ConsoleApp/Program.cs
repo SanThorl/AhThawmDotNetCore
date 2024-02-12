@@ -1,10 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
 using AhThawmDotNetCore.ConsoleApp.DapperExamples;
+using AhThawmDotNetCore.ConsoleApp.EFCoreExamples;
 using System.Data;
 using System.Data.SqlClient;
 
-Console.WriteLine("Hello, World!");
+ Console.WriteLine("Hello, World!");
 
 // F5 => Run
 // Shift + F5 => Stop
@@ -64,7 +65,7 @@ foreach(DataRow dr in dt.Rows)
 
 //adoDotNetExample.Delete(31);
 
-DapperExample dapperExample = new DapperExample();
+//DapperExample dapperExample = new DapperExample();
 //dapperExample.Read();
 
 //dapperExample.Edit(29);
@@ -73,5 +74,15 @@ DapperExample dapperExample = new DapperExample();
 
 //dapperExample.Update(30, "test dap title2", "test dap author2", "test dap content2");
 
-dapperExample.Delete(26);
+//dapperExample.Delete(26);
+
+EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Read();
+//eFCoreExample.Edit(24);
+
+//eFCoreExample.Create("test EF title", "test EF author", "test EF content");
+
+//eFCoreExample.Update(32, "test EF title2", "test EF author2", "test EF content2");
+
+eFCoreExample.Delete(27);
 Console.ReadKey();
