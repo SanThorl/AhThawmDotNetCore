@@ -14,3 +14,6 @@ C#
 -asp.net core web nvc[x]
 -asp.net core web api[x]
 First Introduce to DA (DAY Feb 1)
+
+Entity Framework Core (-DatabaseFirst)
+with Models
