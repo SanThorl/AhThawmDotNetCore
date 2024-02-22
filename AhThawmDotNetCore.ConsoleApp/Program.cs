@@ -2,6 +2,7 @@
 using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
 using AhThawmDotNetCore.ConsoleApp.DapperExamples;
 using AhThawmDotNetCore.ConsoleApp.EFCoreExamples;
+using AhThawmDotNetCore.ConsoleApp.HttpClientExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -84,5 +85,12 @@ EFCoreExample eFCoreExample = new EFCoreExample();
 
 //eFCoreExample.Update(32, "test EF title2", "test EF author2", "test EF content2");
 
-eFCoreExample.Delete(27);
+//eFCoreExample.Delete(27);
+
+Console.WriteLine("Waiting for API...");
+Console.ReadKey();
+
+HttpClientExample httpClientExample = new HttpClientExample();
+await httpClientExample.Run();
+
 Console.ReadKey();
