@@ -3,6 +3,7 @@ using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
 using AhThawmDotNetCore.ConsoleApp.DapperExamples;
 using AhThawmDotNetCore.ConsoleApp.EFCoreExamples;
 using AhThawmDotNetCore.ConsoleApp.HttpClientExamples;
+using AhThawmDotNetCore.ConsoleApp.RestClientExamples;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -77,7 +78,7 @@ foreach(DataRow dr in dt.Rows)
 
 //dapperExample.Delete(26);
 
-EFCoreExample eFCoreExample = new EFCoreExample();
+//EFCoreExample eFCoreExample = new EFCoreExample();
 //eFCoreExample.Read();
 //eFCoreExample.Edit(24);
 
@@ -90,7 +91,10 @@ EFCoreExample eFCoreExample = new EFCoreExample();
 Console.WriteLine("Waiting for API...");
 Console.ReadKey();
 
-HttpClientExample httpClientExample = new HttpClientExample();
-await httpClientExample.Run();
+//HttpClientExample httpClientExample = new HttpClientExample();
+//await httpClientExample.Run();
+
+RestClientExample restClientExample = new RestClientExample();
+restClientExample.Run();
 
 Console.ReadKey();
