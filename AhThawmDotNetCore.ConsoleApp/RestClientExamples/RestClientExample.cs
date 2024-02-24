@@ -21,7 +21,7 @@ namespace AhThawmDotNetCore.ConsoleApp.RestClientExamples
             // await Create("restClient title1", "restClient author1", "restClient content1");
             //await Create("restClient title2", "restClient author2", "restClient content2");
             //await Update(43, "rest title", "rest author", "rest content");
-            await Delete(42);
+           // await Delete(42);
         }
         private async Task Read()
         {

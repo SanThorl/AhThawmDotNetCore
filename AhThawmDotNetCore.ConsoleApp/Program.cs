@@ -3,6 +3,7 @@ using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
 using AhThawmDotNetCore.ConsoleApp.DapperExamples;
 using AhThawmDotNetCore.ConsoleApp.EFCoreExamples;
 using AhThawmDotNetCore.ConsoleApp.HttpClientExamples;
+using AhThawmDotNetCore.ConsoleApp.RefitExample;
 using AhThawmDotNetCore.ConsoleApp.RestClientExamples;
 using System.Data;
 using System.Data.SqlClient;
@@ -94,7 +95,10 @@ Console.ReadKey();
 //HttpClientExample httpClientExample = new HttpClientExample();
 //await httpClientExample.Run();
 
-RestClientExample restClientExample = new RestClientExample();
-restClientExample.Run();
+//RestClientExample restClientExample = new RestClientExample();
+//restClientExample.Run();
+
+RefitExample refitExample = new RefitExample();
+refitExample.Run();
 
 Console.ReadKey();
