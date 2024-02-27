@@ -102,21 +102,23 @@ foreach(DataRow dr in dt.Rows)
 
 //RefitExample refitExample = new RefitExample();
 //refitExample.Run();
-BlogModel blog = new BlogModel();
-blog.BlogTitle = "Test 2";
-blog.BlogAuthor = "Test 3";
-blog.BlogContent = "Test 4";
-Console.WriteLine(blog);
-string json = JsonConvert.SerializeObject(blog);
-Console.WriteLine(json);
-Console.WriteLine(blog.BlogTitle);
-Console.WriteLine(blog.BlogAuthor);
-Console.WriteLine(blog.BlogContent);
+//BlogModel blog = new BlogModel();
+//blog.BlogTitle = "Test 2";
+//blog.BlogAuthor = "Test 3";
+//blog.BlogContent = "Test 4";
+//Console.WriteLine(blog);
+//string json = JsonConvert.SerializeObject(blog);
+//Console.WriteLine(json);
+//Console.WriteLine(blog.BlogTitle);
+//Console.WriteLine(blog.BlogAuthor);
+//Console.WriteLine(blog.BlogContent);
 
-BlogModel blog2 = JsonConvert.DeserializeObject<BlogModel>(json)!;
-Console.WriteLine(blog2);
-Console.WriteLine(blog2.BlogTitle);
-Console.WriteLine(blog2.BlogAuthor);
-Console.WriteLine(blog2.BlogContent);
+//BlogModel blog2 = JsonConvert.DeserializeObject<BlogModel>(json)!;
+//Console.WriteLine(blog2);
+//Console.WriteLine(blog2.BlogTitle);
+//Console.WriteLine(blog2.BlogAuthor);
+//Console.WriteLine(blog2.BlogContent);
+HttpClientExample2 httpClientExample2 = new HttpClientExample2();
+httpClientExample2.Run();
 
 Console.ReadKey();
