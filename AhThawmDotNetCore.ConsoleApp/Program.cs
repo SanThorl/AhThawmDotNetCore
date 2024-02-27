@@ -1,10 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples;
+using AhThawmDotNetCore.ConsoleApp.BlogModels;
 using AhThawmDotNetCore.ConsoleApp.DapperExamples;
 using AhThawmDotNetCore.ConsoleApp.EFCoreExamples;
 using AhThawmDotNetCore.ConsoleApp.HttpClientExamples;
 using AhThawmDotNetCore.ConsoleApp.RefitExample;
 using AhThawmDotNetCore.ConsoleApp.RestClientExamples;
+using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -89,8 +91,8 @@ foreach(DataRow dr in dt.Rows)
 
 //eFCoreExample.Delete(27);
 
-Console.WriteLine("Waiting for API...");
-Console.ReadKey();
+//Console.WriteLine("Waiting for API...");
+//Console.ReadKey();
 
 //HttpClientExample httpClientExample = new HttpClientExample();
 //await httpClientExample.Run();
@@ -98,7 +100,23 @@ Console.ReadKey();
 //RestClientExample restClientExample = new RestClientExample();
 //restClientExample.Run();
 
-RefitExample refitExample = new RefitExample();
-refitExample.Run();
+//RefitExample refitExample = new RefitExample();
+//refitExample.Run();
+BlogModel blog = new BlogModel();
+blog.BlogTitle = "Test 2";
+blog.BlogAuthor = "Test 3";
+blog.BlogContent = "Test 4";
+Console.WriteLine(blog);
+string json = JsonConvert.SerializeObject(blog);
+Console.WriteLine(json);
+Console.WriteLine(blog.BlogTitle);
+Console.WriteLine(blog.BlogAuthor);
+Console.WriteLine(blog.BlogContent);
+
+BlogModel blog2 = JsonConvert.DeserializeObject<BlogModel>(json)!;
+Console.WriteLine(blog2);
+Console.WriteLine(blog2.BlogTitle);
+Console.WriteLine(blog2.BlogAuthor);
+Console.WriteLine(blog2.BlogContent);
 
 Console.ReadKey();
