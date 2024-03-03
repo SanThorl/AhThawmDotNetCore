@@ -17,7 +17,8 @@ HttpClient
 RestClient
 Refit
 
-CRUD with html, js, jquery(Feb 28,29)
+CRUD with html, js, jquery(Feb 27,28)
+plugin(sweetAlert, notiFlix, DataTable)FEB 29
 First Introduce to DA (DAY Feb 1)
 
 Entity Framework Core (-DatabaseFirst)
