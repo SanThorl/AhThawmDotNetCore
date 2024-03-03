@@ -28,7 +28,7 @@ function readBlog() {
 
 function editBlog(id) {
     let lstBlog = getBlogs();
-    let lst = lstBlog.filter(X => X.Id === id);
+    let lst = lstBlog.filter(X=>X.Id===id);
 
     if (lst.lenght === 0) {
         console.log("No Data Found.");
