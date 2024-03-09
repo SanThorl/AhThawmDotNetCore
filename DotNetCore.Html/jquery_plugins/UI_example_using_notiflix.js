@@ -67,6 +67,7 @@ function createBlog(title, author, content) {
     }
     lstBlog.push(blog);
     setLocalStorage(lstBlog);
+    readBlog();
 }
 
 function updateBlog(id, title, author, content) {
@@ -85,51 +86,40 @@ function updateBlog(id, title, author, content) {
         Content: content
     }
     setLocalStorage(lstBlog);
+    readBlog();
 }
 
 function deleteBlog(id) {
-    Swal.fire({
-        title: "Confirm",
-        text: "Are you sure want to delete?",
-        icon: "question",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes!!"
-    }).then((result) => {
-        if (result.isConfirmed) {
-            let lstBlog = getBlogs();
+    Notiflix.Confirm.show(
+        'Confirm',
+        'Are you sure want to delete?',
+        'Yes',
+        'No',
+        function okCb() {
+            Notiflix.Block.dots('#frm1');
+            setTimeout(() => {
+                let lstBlog = getBlogs();
 
-            let lst = lstBlog.filter(X => X.Id === id);
-            if (lst.length === 0) {
-                console.log("No Data Found.");
-                return;
-            }
-            lstBlog = lstBlog.filter(X => X.Id !== id);
+                let lst = lstBlog.filter(X => X.Id === id);
+                if (lst.length === 0) {
+                    console.log("No Data Found.");
+                    return;
+                }
+                lstBlog = lstBlog.filter(X => X.Id !== id);
 
-            setLocalStorage(lstBlog);
+                setLocalStorage(lstBlog);
+                Notiflix.Block.remove('#frm1');
+                successMessage("Deleting Successful.");
 
-            successMessage("Deleting Successful.");
-            
-            readBlog();
+                readBlog();
+            }, 3000);
+
+        },
+        function candelCb() {
+
         }
-    });
-
+    );
 }
-
-// let result = confirm('Are you sure want to delete?');
-// if (!result) return;
-
-// let lstBlog = getBlogs();
-
-// let lst = lstBlog.filter(X => X.Id === id);
-// if (lst.length === 0) {
-//     console.log("No Data Found.");
-//     stBlog = lstBlog.filter(X => X.Id !== id);
-
-//     setLocalStorage(lstBlog);
-
-//     readBlog(); return;
 
 function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -156,14 +146,27 @@ $('#btnSave').click(function () {
     const author = $('#Author').val();
     const content = $('#Content').val();
     if (_blogId === '') {
-        createBlog(title, author, content);
-        successMessage('Saving Successful.');
+        Notiflix.Loading.circle();
+        setTimeout(() => {
+            createBlog(title, author, content);
+
+            Notiflix.Loading.remove();
+
+            successMessage('Saving Successful');
+        }, 3000);
     }
     else {
-        updateBlog(_blogId, title, author, content);
-        successMessage('Updating Successful.');
-        _blogId = '';
+        Notiflix.Loading.circle();
+        setTimeout(() => {
+            updateBlog(_blogId, title, author, content);
+
+            Notiflix.Loading.remove();
+
+            successMessage('Updating Successful');
+            _blogId = '';
+        }, 3000);
     }
+
     $('#Title').val('');
     $('#Author').val('');
     $('#Content').val('');
@@ -172,9 +175,10 @@ $('#btnSave').click(function () {
 })
 
 function successMessage(msg) {
-    Swal.fire({
-        title: "Success",
-        text: msg,
-        icon: "success"
-    });
+    // Notiflix.Notify.success(msg);
+    Notiflix.Report.success(
+        'Success',
+        msg,
+        'Okay',
+    );
 }
