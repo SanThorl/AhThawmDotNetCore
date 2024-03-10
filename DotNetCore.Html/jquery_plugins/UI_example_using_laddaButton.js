@@ -1,6 +1,7 @@
 const tblBlog = 'Tbl_Blog';
 let _blogId = '';
-runBlog();
+//runBlog();
+readBlog();
 
 function runBlog() {
     readBlog();
@@ -141,39 +142,42 @@ function setLocalStorage(blogs) {
     localStorage.setItem(tblBlog, jsonStr);
 }
 
-$('#btnSave').click(function () {
+$('#btnSave').click(function (e) {
+    e.preventDefault();
+    var l = Ladda.create(this);
+    l.start();
+
     const title = $('#Title').val();
     const author = $('#Author').val();
     const content = $('#Content').val();
+
     if (_blogId === '') {
-        Notiflix.Loading.circle();
         setTimeout(() => {
             createBlog(title, author, content);
+            successMessage('Saving Successful');
+            l.stop();
 
             $('#Title').val('');
             $('#Author').val('');
             $('#Content').val('');
             $('#Title').focus();
+        
             readBlog();
-            Notiflix.Loading.remove();
-
-            successMessage('Saving Successful');
         }, 3000);
     }
     else {
-        Notiflix.Loading.circle();
         setTimeout(() => {
             updateBlog(_blogId, title, author, content);
+            successMessage('Updating Successful');
+            l.stop();
+            _blogId = '';
 
             $('#Title').val('');
             $('#Author').val('');
             $('#Content').val('');
             $('#Title').focus();
-            readBlog();
-            Notiflix.Loading.remove();
 
-            successMessage('Updating Successful');
-            _blogId = '';
+    readBlog();
         }, 3000);
     }
 
@@ -181,6 +185,7 @@ $('#btnSave').click(function () {
     // $('#Author').val('');
     // $('#Content').val('');
     // $('#Title').focus();
+
     // readBlog();
 })
 
