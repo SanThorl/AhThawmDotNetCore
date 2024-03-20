@@ -24,7 +24,7 @@ namespace AhThawmDotNetCore.WebApi.Controllers
         [HttpGet ("{id}")]
         public IActionResult GetBlog(int id)
         {
-            BlogModel? item = _db.Blogs.FirstOrDefault(item => item.BlogId == id);
+            BlogModel item = _db.Blogs.FirstOrDefault(item => item.BlogId == id);
             if(item is null)
             {
                 return NotFound("No Data Found.");

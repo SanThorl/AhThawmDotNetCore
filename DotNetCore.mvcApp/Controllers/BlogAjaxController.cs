@@ -92,11 +92,10 @@ namespace DotNetCore.mvcApp.Controllers
 
         [HttpPost]
         [ActionName("Delete")]
-        public IActionResult BlogDelete(int id)
+        public IActionResult BlogDelete(BlogModel blog)
         {
             BlogMessageResponseModel model = new BlogMessageResponseModel();
-
-            var item = _context.Blogs.FirstOrDefault(X => X.BlogId == id);
+            var item = _context.Blogs.FirstOrDefault(X => X.BlogId == blog.BlogId);
             if (item is null)
             {
                 model = new BlogMessageResponseModel()
@@ -107,7 +106,6 @@ namespace DotNetCore.mvcApp.Controllers
                 };
                 return Json(model);
             }
-
             _context.Blogs.Remove(item);
             int result = _context.SaveChanges();
             string message = result > 0 ? "Deleting Successful." : "Deleting Failed.";
