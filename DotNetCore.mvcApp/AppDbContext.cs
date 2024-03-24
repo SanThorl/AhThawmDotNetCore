@@ -25,4 +25,8 @@ public class AppDbContext : DbContext
         optionsBuilder.UseSqlServer(sqlConnectionStringBuilder.ConnectionString);
     }
     public DbSet<BlogModel> Blogs { get; set; }
+
+    public DbSet<PageStatisticsModel> PageStatistics { get; set; }
+
+    public DbSet<RadarModel> Radars { get; set; }
 }
