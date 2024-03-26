@@ -21,6 +21,37 @@ namespace AhThawmDotNetCore.WebApi.Controllers
             return Ok(lst);
         }
 
+        [HttpGet("pageNo/{pageNo}/pageSize/{pageSize}")]
+        public IActionResult GetBlogs(int pageNo, int pageSize)
+        {
+            int rowCount = _db.Blogs.Count();
+
+            int pageCount = rowCount / pageSize;
+            if (rowCount % pageSize > 0)
+                pageCount++;
+
+            if(pageNo > pageCount)
+            {
+                return BadRequest(new { Message = "Invalid PageNo." });
+            }
+
+            List<BlogModel> lst = _db.Blogs
+                //.OrderByDescending(X => X.BlogId)
+                .Skip((pageNo - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            BlogResponseModel model = new();
+            model.Data = lst;
+            model.PageSize = pageSize;
+            model.PageNo = pageNo;
+            model.PageCount = pageCount;
+
+            //model.IsEndOfPage = pageNo == pageCount;
+
+            return Ok(model);
+        }
+
         [HttpGet ("{id}")]
         public IActionResult GetBlog(int id)
         {

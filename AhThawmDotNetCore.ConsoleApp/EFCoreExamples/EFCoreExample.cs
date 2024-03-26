@@ -86,5 +86,14 @@ namespace AhThawmDotNetCore.ConsoleApp.EFCoreExamples
             string msg = result > 0 ? "Deleting Successful." : "Deleting Failed.";
             Console.WriteLine(msg);
         }
+
+        public void Generate(int count)
+        {
+            for(int i=0; i< count; i++)
+            {
+                int rowNo = i + 1;
+                Create("Title" + rowNo, "Author" + rowNo, "Content" + rowNo);
+            }
+        }
     }
 }

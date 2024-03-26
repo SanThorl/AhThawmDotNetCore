@@ -118,7 +118,20 @@ foreach(DataRow dr in dt.Rows)
 //Console.WriteLine(blog2.BlogTitle);
 //Console.WriteLine(blog2.BlogAuthor);
 //Console.WriteLine(blog2.BlogContent);
-HttpClientExample2 httpClientExample2 = new HttpClientExample2();
-httpClientExample2.Run();
+//HttpClientExample2 httpClientExample2 = new HttpClientExample2();
+//httpClientExample2.Run();
 
+//EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Generate(391);
+
+int pageSize = 10;
+AppDbContext db = new AppDbContext();
+int rowCount = db.Blogs.Count();
+
+int pageCount = rowCount / pageSize;
+Console.WriteLine($"Current Page Size : {pageCount}");
+
+if (rowCount % pageSize > 0)
+    pageCount++;
+Console.WriteLine($"Current Page Size : {pageCount}");
 Console.ReadKey();
