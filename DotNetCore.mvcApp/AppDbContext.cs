@@ -12,18 +12,26 @@ namespace DotNetCore.mvcApp;
 
 public class AppDbContext : DbContext
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public AppDbContext()
     {
-        SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
-        {
-            DataSource = ".",
-            InitialCatalog = "TestDb",
-            UserID = "sa",
-            Password = "gaj24@02",
-            TrustServerCertificate = true
-        };
-        optionsBuilder.UseSqlServer(sqlConnectionStringBuilder.ConnectionString);
     }
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+
+    }
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //{
+    //    SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+    //    {
+    //        DataSource = ".",
+    //        InitialCatalog = "TestDb",
+    //        UserID = "sa",
+    //        Password = "gaj24@02",
+    //        TrustServerCertificate = true
+    //    };
+    //    optionsBuilder.UseSqlServer(sqlConnectionStringBuilder.ConnectionString);
+    //}
     public DbSet<BlogModel> Blogs { get; set; }
 
     public DbSet<PageStatisticsModel> PageStatistics { get; set; }

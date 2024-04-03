@@ -8,13 +8,14 @@ namespace DotNetCore.mvcApp.Controllers
     {
         private readonly AppDbContext _context;
 
-        public BlogAjaxController()
+        public BlogAjaxController(AppDbContext context)
         {
-            _context = new AppDbContext();
+            _context = context;
         }
 
+
         //https://localhost:7148/Blog/Index
-       [ActionNameAttribute("Index")]
+        [ActionNameAttribute("Index")]
         public IActionResult BlogIndex()
         {
             List<BlogModel> lst = _context.Blogs.ToList();

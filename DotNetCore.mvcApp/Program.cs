@@ -1,10 +1,33 @@
+using AHThawmDotNetCore.Shared;
+using DotNetCore.mvcApp;
+using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews().AddJsonOptions(opt => {
+builder.Services.AddControllersWithViews().AddJsonOptions(opt =>
+{
     opt.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
+builder.Services.AddDbContext<AppDbContext>(opt =>
+{
+    //SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+    //{
+    //    DataSource = ".",
+    //    InitialCatalog = "TestDb",
+    //    UserID = "sa",
+    //    Password = "gaj24@02",
+    //    TrustServerCertificate = true
+    //};
+    //.UseSqlServer(sqlConnectionStringBuilder.ConnectionString);
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+}, ServiceLifetime.Transient,
+ServiceLifetime.Transient);
+
+//builder.Services.AddScoped<AdoDotNetService>();
+builder.Services.AddScoped(n => new AdoDotNetService(builder.Configuration.GetConnectionString("DbConnection")!));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

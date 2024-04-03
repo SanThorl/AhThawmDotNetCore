@@ -8,9 +8,9 @@ namespace DotNetCore.mvcApp.Controllers
     {
         private readonly AppDbContext _context;
 
-        public BlogController()
+        public BlogController(AppDbContext context)
         {
-            _context = new AppDbContext();
+            _context =  context;
         }
 
         //https://localhost:7148/Blog/Index
