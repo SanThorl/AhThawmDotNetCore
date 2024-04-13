@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.mvcApp", "DotNet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork.WebApi", "HomeWork.WebApi\HomeWork.WebApi.csproj", "{87BB63AD-774C-4AD4-8756-0E3DA67F469A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AHThawmDotNetCore.Shared", "AHThawmDotNetCore.Shared\AHThawmDotNetCore.Shared.csproj", "{15B6A855-0524-4D75-94F1-36A859505BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AHThawmDotNetCore.Shared", "AHThawmDotNetCore.Shared\AHThawmDotNetCore.Shared.csproj", "{15B6A855-0524-4D75-94F1-36A859505BF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.MvcApp", "AhThawmDotNetCore.MvcApp\AhThawmDotNetCore.MvcApp.csproj", "{44C41370-2D80-44F5-A9FC-26DFAA30EDD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{15B6A855-0524-4D75-94F1-36A859505BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15B6A855-0524-4D75-94F1-36A859505BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15B6A855-0524-4D75-94F1-36A859505BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C41370-2D80-44F5-A9FC-26DFAA30EDD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C41370-2D80-44F5-A9FC-26DFAA30EDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C41370-2D80-44F5-A9FC-26DFAA30EDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C41370-2D80-44F5-A9FC-26DFAA30EDD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

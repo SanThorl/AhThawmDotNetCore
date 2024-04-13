@@ -10,6 +10,6 @@ namespace AhThawmDotNetCore.WebApi.Models
         public int PageCount { get; set; }
         public bool IsEndOfPage => PageNo >= PageCount;
 
-        public List<BlogModel> Data { get; set; }
+        public List<BlogModel>? Data { get; set; }
     }
 }
