@@ -7,6 +7,7 @@ using AhThawmDotNetCore.ConsoleApp.HttpClientExamples;
 using AhThawmDotNetCore.ConsoleApp.RefitExample;
 using AhThawmDotNetCore.ConsoleApp.RestClientExamples;
 using Newtonsoft.Json;
+using Serilog;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -124,14 +125,37 @@ foreach(DataRow dr in dt.Rows)
 //EFCoreExample eFCoreExample = new EFCoreExample();
 //eFCoreExample.Generate(391);
 
-int pageSize = 10;
-AppDbContext db = new AppDbContext();
-int rowCount = db.Blogs.Count();
+//int pageSize = 10;
+//AppDbContext db = new AppDbContext();
+//int rowCount = db.Blogs.Count();
 
-int pageCount = rowCount / pageSize;
-Console.WriteLine($"Current Page Size : {pageCount}");
+//int pageCount = rowCount / pageSize;
+//Console.WriteLine($"Current Page Size : {pageCount}");
 
-if (rowCount % pageSize > 0)
-    pageCount++;
-Console.WriteLine($"Current Page Size : {pageCount}");
+//if (rowCount % pageSize > 0)
+//    pageCount++;
+//Console.WriteLine($"Current Page Size : {pageCount}");
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/AhThawmDotNetCore.ConsoleApp.log", rollingInterval: RollingInterval.Hour)
+    .CreateLogger();
+
+Log.Information("Hello, world");
+
+int a = 10, b = 0;
+try
+{
+    Log.Debug("Dividing {A} by {B}", a, b);
+    Console.WriteLine(a / b);
+}
+catch (Exception ex)
+{
+    Log.Error(ex, "Something went wrong");
+}
+finally
+{
+    await Log.CloseAndFlushAsync();
+}
 Console.ReadKey();

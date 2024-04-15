@@ -21,6 +21,7 @@ namespace AhThawmDotNetCore.WebApi.Controllers
             return Ok(lst);
         }
 
+        [HttpGet("{pageNo}/{pageSize}")]
         [HttpGet("pageNo/{pageNo}/pageSize/{pageSize}")]
         public IActionResult GetBlogs(int pageNo, int pageSize)
         {
