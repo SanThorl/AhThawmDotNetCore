@@ -103,7 +103,7 @@ try
     app.MapPost("/api/blog", (AppDbContext _db, BlogModel blog) =>
     {
         _db.Blogs.Add(blog);
-        int result = _db.SaveChanges();
+         int result = _db.SaveChanges();
         string message = result > 0 ? "Saving Successful." : "Saving Failed.";
         return Results.Ok(message);
     })

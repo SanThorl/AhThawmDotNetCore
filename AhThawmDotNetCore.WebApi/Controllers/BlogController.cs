@@ -1,6 +1,8 @@
 ﻿using AhThawmDotNetCore.WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Serilog;
 
 namespace AhThawmDotNetCore.WebApi.Controllers
 {
@@ -8,16 +10,20 @@ namespace AhThawmDotNetCore.WebApi.Controllers
     [ApiController]
     public class BlogController : ControllerBase
     {
+        private readonly ILogger<BlogController> _logger;
         private readonly AppDbContext _db;
-        public BlogController()
+        public BlogController(ILogger<BlogController> logger)
         {
             _db = new AppDbContext();
+            _logger = logger;
         }
 
         [HttpGet]
         public IActionResult GetBlogs()
         {
             List<BlogModel> lst = _db.Blogs.OrderByDescending(x => x.BlogId).ToList();
+            _logger.LogInformation("Count is" + lst.Count.ToString());
+            _logger.LogInformation(JsonConvert.SerializeObject(lst, Formatting.Indented)); 
             return Ok(lst);
         }
 
