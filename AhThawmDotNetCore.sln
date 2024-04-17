@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.MvcApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.MinimalApi", "AhThawmDotNetCore.MinimalApi\AhThawmDotNetCore.MinimalApi.csproj", "{510F6178-7515-4E9F-B633-97C18300E929}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.ConsoleApp2", "AhThawmDotNetCore.ConsoleApp2\AhThawmDotNetCore.ConsoleApp2.csproj", "{631AB55A-4F98-4FD7-9C84-E792A5028173}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.ConsoleApp2", "AhThawmDotNetCore.ConsoleApp2\AhThawmDotNetCore.ConsoleApp2.csproj", "{631AB55A-4F98-4FD7-9C84-E792A5028173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.UI", "AhThawmDotNetCore.UI\AhThawmDotNetCore.UI.csproj", "{88460A4B-1449-40A9-B137-32FEABC36C85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{631AB55A-4F98-4FD7-9C84-E792A5028173}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{631AB55A-4F98-4FD7-9C84-E792A5028173}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{631AB55A-4F98-4FD7-9C84-E792A5028173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88460A4B-1449-40A9-B137-32FEABC36C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88460A4B-1449-40A9-B137-32FEABC36C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88460A4B-1449-40A9-B137-32FEABC36C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88460A4B-1449-40A9-B137-32FEABC36C85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
