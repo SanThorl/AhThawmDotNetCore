@@ -28,7 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.ConsoleAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.UI", "AhThawmDotNetCore.UI\AhThawmDotNetCore.UI.csproj", "{88460A4B-1449-40A9-B137-32FEABC36C85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.chatApp", "AhThawmDotNetCore.chatApp\AhThawmDotNetCore.chatApp.csproj", "{A70216DB-8285-4023-9F79-A3450E79AC09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.chatApp", "AhThawmDotNetCore.chatApp\AhThawmDotNetCore.chatApp.csproj", "{A70216DB-8285-4023-9F79-A3450E79AC09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.realTimeChartApp", "AhThawmDotNetCore.realTimeChartApp\AhThawmDotNetCore.realTimeChartApp.csproj", "{062ADFAC-5D39-4097-9036-CA8FB1272159}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{A70216DB-8285-4023-9F79-A3450E79AC09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A70216DB-8285-4023-9F79-A3450E79AC09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A70216DB-8285-4023-9F79-A3450E79AC09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062ADFAC-5D39-4097-9036-CA8FB1272159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062ADFAC-5D39-4097-9036-CA8FB1272159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062ADFAC-5D39-4097-9036-CA8FB1272159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062ADFAC-5D39-4097-9036-CA8FB1272159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
