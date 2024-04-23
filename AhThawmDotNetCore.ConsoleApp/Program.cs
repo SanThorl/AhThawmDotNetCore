@@ -158,4 +158,6 @@ finally
 {
     await Log.CloseAndFlushAsync();
 }
-Console.ReadKey();
+//Console.ReadKey();
+
+Console.ReadLine();
