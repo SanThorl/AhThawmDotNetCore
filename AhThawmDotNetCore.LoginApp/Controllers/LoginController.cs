@@ -25,18 +25,18 @@ namespace AhThawmDotNetCore.LoginApp.Controllers
             if (item is null) return View();
 
             string sessionId = Guid.NewGuid().ToString();
-            DateTime sessionExpired = DateTime.Now.AddSeconds(30);
+            DateTime sessionExpired = DateTime.Now.AddSeconds(50);
 
             CookieOptions cookie = new CookieOptions();
-            cookie.Expires = sessionExpired;
+            cookie.Expires = DateTime.Now.AddMinutes(1);
             Response.Cookies.Append("UserId", item.UserId, cookie);
             Response.Cookies.Append("SessionId", sessionId, cookie);
 
             await _appDbContext.Login.AddAsync(new LoginModel
             {
-                SessionId = Guid.NewGuid().ToString(),
+                SessionId = sessionId,
                 UserId = item.UserId,
-                SessionExpired = DateTime.Now.AddMinutes(1)
+                SessionExpired = sessionExpired
             });
 
             await _appDbContext.SaveChangesAsync();
