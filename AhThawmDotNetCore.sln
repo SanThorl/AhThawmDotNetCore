@@ -32,7 +32,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.chatApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.realTimeChartApp", "AhThawmDotNetCore.realTimeChartApp\AhThawmDotNetCore.realTimeChartApp.csproj", "{062ADFAC-5D39-4097-9036-CA8FB1272159}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.LoginApp", "AhThawmDotNetCore.LoginApp\AhThawmDotNetCore.LoginApp.csproj", "{124784DD-28F5-442F-849E-9DBD5D5CB78D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.LoginApp", "AhThawmDotNetCore.LoginApp\AhThawmDotNetCore.LoginApp.csproj", "{124784DD-28F5-442F-849E-9DBD5D5CB78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorServerApp", "AhThawmDotNetCore.BlazorServerApp\AhThawmDotNetCore.BlazorServerApp.csproj", "{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorWasmApp", "AhThawmDotNetCore.BlazorWasmApp\AhThawmDotNetCore.BlazorWasmApp.csproj", "{84B96E92-282E-48A5-BDA7-52F6CC69458E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Server", "AhThawmDotNetCore.BlazorClientServer\Server\AhThawmDotNetCore.BlazorClientServer.Server.csproj", "{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Client", "AhThawmDotNetCore.BlazorClientServer\Client\AhThawmDotNetCore.BlazorClientServer.Client.csproj", "{394BBDD9-92EC-4955-A03A-10CFBC5B194D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Shared", "AhThawmDotNetCore.BlazorClientServer\Shared\AhThawmDotNetCore.BlazorClientServer.Shared.csproj", "{E294E87E-13DD-42CD-B48D-05B30441C066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +102,26 @@ Global
 		{124784DD-28F5-442F-849E-9DBD5D5CB78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124784DD-28F5-442F-849E-9DBD5D5CB78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{124784DD-28F5-442F-849E-9DBD5D5CB78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B96E92-282E-48A5-BDA7-52F6CC69458E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B96E92-282E-48A5-BDA7-52F6CC69458E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B96E92-282E-48A5-BDA7-52F6CC69458E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B96E92-282E-48A5-BDA7-52F6CC69458E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394BBDD9-92EC-4955-A03A-10CFBC5B194D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394BBDD9-92EC-4955-A03A-10CFBC5B194D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394BBDD9-92EC-4955-A03A-10CFBC5B194D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394BBDD9-92EC-4955-A03A-10CFBC5B194D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E294E87E-13DD-42CD-B48D-05B30441C066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E294E87E-13DD-42CD-B48D-05B30441C066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E294E87E-13DD-42CD-B48D-05B30441C066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E294E87E-13DD-42CD-B48D-05B30441C066}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

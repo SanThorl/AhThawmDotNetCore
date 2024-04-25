@@ -1,0 +1,36 @@
+﻿@page "/blog"
+@inject AppDbContext _db
+
+<PageTitle>PageBlog</PageTitle>
+
+<div class="mb-3">
+    <label class="form-babel">Title</label>
+    <input type="text" class="form-control" @bind-value="requestModel.BlogTitle" />
+</div>
+<div>
+    <label class="form-babel">Author</label>
+    <input type="text" class="form-control" @bind-value="requestModel.BlogAuthor" />
+</div>
+<div>
+    <label class="form-babel">Content</label>
+    <input type="text" class="form-control"  @bind-value="requestModel.BlogContent" />
+</div>
+<button type="button" class="btn btn-dark" @onclick="Cancel">Cancel</button>
+<button type="button" class="btn btn-success" @onclick="Save">Save</button>
+
+@code {
+    private BlogModel requestModel = new();
+
+    private async Task Save()
+    {
+        await _db.Blogs.AddAsync(BlogModel);
+        await _db.SaveChangesAsync();
+    }
+
+    private void Cancel()
+    {
+
+    }
+
+    
+    }

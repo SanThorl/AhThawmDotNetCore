@@ -109,5 +109,25 @@ namespace AhThawmDotNetCore.WebApi.Controllers
             string msg = result > 0 ? "Deleting Successful." : "Deleting Failed.";
             return Ok(msg);
         }
+
+        public IActionResult GenerateBlogList()
+        {
+            List<BlogModel> lstBlogModel = new();
+            for (int i = 1; i <= 395; i++)
+            {
+                BlogModel item = new BlogModel
+                {
+                    BlogTitle = $"BlogTitle{i}",
+                    BlogAuthor = $"BlogAuthor{i}",
+                    BlogContent = $"BlogContent{i}"
+                };
+                lstBlogModel.Add(item);
+            }
+
+            _db.Blogs.AddRange(lstBlogModel);
+            int result = _db.SaveChanges();
+            string msg = result > 0 ? "Success." : "Failed.";
+            return Ok(msg);
+        }
     }
 }

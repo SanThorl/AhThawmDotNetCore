@@ -26,6 +26,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseCookieMiddleware();
+
 app.UseRouting();
 
 app.UseAuthorization();
