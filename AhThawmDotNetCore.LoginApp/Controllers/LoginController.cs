@@ -25,7 +25,7 @@ namespace AhThawmDotNetCore.LoginApp.Controllers
             if (item is null) return View();
 
             string sessionId = Guid.NewGuid().ToString();
-            DateTime sessionExpired = DateTime.Now.AddSeconds(50);
+            DateTime sessionExpired = DateTime.Now.AddSeconds(30);
 
             CookieOptions cookie = new CookieOptions();
             cookie.Expires = DateTime.Now.AddMinutes(1);
