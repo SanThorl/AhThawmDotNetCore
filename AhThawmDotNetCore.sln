@@ -34,15 +34,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.realTimeC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.LoginApp", "AhThawmDotNetCore.LoginApp\AhThawmDotNetCore.LoginApp.csproj", "{124784DD-28F5-442F-849E-9DBD5D5CB78D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorServerApp", "AhThawmDotNetCore.BlazorServerApp\AhThawmDotNetCore.BlazorServerApp.csproj", "{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorServerApp", "AhThawmDotNetCore.BlazorServerApp\AhThawmDotNetCore.BlazorServerApp.csproj", "{C9458FE7-9BDD-44B3-9BD6-CDD64FA638B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorWasmApp", "AhThawmDotNetCore.BlazorWasmApp\AhThawmDotNetCore.BlazorWasmApp.csproj", "{84B96E92-282E-48A5-BDA7-52F6CC69458E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorWasmApp", "AhThawmDotNetCore.BlazorWasmApp\AhThawmDotNetCore.BlazorWasmApp.csproj", "{84B96E92-282E-48A5-BDA7-52F6CC69458E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Server", "AhThawmDotNetCore.BlazorClientServer\Server\AhThawmDotNetCore.BlazorClientServer.Server.csproj", "{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorClientServer.Server", "AhThawmDotNetCore.BlazorClientServer\Server\AhThawmDotNetCore.BlazorClientServer.Server.csproj", "{EEE0A6E5-61C7-4CBE-A48C-C67A8ACA0109}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Client", "AhThawmDotNetCore.BlazorClientServer\Client\AhThawmDotNetCore.BlazorClientServer.Client.csproj", "{394BBDD9-92EC-4955-A03A-10CFBC5B194D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorClientServer.Client", "AhThawmDotNetCore.BlazorClientServer\Client\AhThawmDotNetCore.BlazorClientServer.Client.csproj", "{394BBDD9-92EC-4955-A03A-10CFBC5B194D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorClientServer.Shared", "AhThawmDotNetCore.BlazorClientServer\Shared\AhThawmDotNetCore.BlazorClientServer.Shared.csproj", "{E294E87E-13DD-42CD-B48D-05B30441C066}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorClientServer.Shared", "AhThawmDotNetCore.BlazorClientServer\Shared\AhThawmDotNetCore.BlazorClientServer.Shared.csproj", "{E294E87E-13DD-42CD-B48D-05B30441C066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

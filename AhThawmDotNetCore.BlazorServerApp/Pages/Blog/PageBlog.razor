@@ -59,6 +59,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        //await Generate();
         await List();
     }
 
@@ -122,6 +123,24 @@
         await _db.SaveChangesAsync();
         requestModel = new();
         await List();
+    }
+
+    private async Task Generate()
+    {
+        List<BlogModel> lstBlogModel = new();
+        for (int i = 1; i <= 395; i++)
+        {
+            BlogModel item = new BlogModel
+                {
+                    BlogTitle = $"BlogTitle{i}",
+                    BlogAuthor = $"BlogAuthor{i}",
+                    BlogContent = $"BlogContent{i}"
+                };
+            lstBlogModel.Add(item);
+        }
+
+        _db.Blogs.AddRange(lstBlogModel);
+        int result = _db.SaveChanges();
     }
 
     }
