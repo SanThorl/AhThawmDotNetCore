@@ -1,8 +1,12 @@
+using AhThawmDotNetCore.WebApi;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging.Configuration;
 using Serilog;
 using Serilog.Sinks.MSSqlServer;
 using System.Data.Common;
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 string outputFolderPath = AppDomain.CurrentDomain.BaseDirectory;
 string LogFilePath = Path.Combine(outputFolderPath, "logs/AhThawmDotNetCore.WebApi_.txt");
@@ -26,11 +30,22 @@ Log.Logger = new LoggerConfiguration()
         }
     )
     .CreateLogger();
+
 try
 {
     Log.Information("Starting web application");
 
     var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy(name: MyAllowSpecificOrigins,
+                          policy =>
+                          {
+                              policy.WithOrigins("https://localhost:7057",
+                                                  "http://localhost:5032");
+                          });
+    });
 
     builder.Host.UseSerilog(); // <-- Add this line
 
@@ -40,8 +55,12 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    builder.Services.AddDbContext<AppDbContext>(opt =>
+    {
+        opt.UseSqlServer(connectionString);
+    },ServiceLifetime.Transient,ServiceLifetime.Transient);
 
-    var app = builder.Build();
+        var app = builder.Build();
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
@@ -51,6 +70,8 @@ try
     }
  
     app.UseHttpsRedirection();
+
+    app.UseCors(MyAllowSpecificOrigins);
 
     app.UseAuthorization();
 

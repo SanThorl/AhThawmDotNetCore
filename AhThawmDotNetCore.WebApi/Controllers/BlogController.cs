@@ -1,5 +1,6 @@
 ﻿using AhThawmDotNetCore.WebApi.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Serilog;
@@ -12,9 +13,10 @@ namespace AhThawmDotNetCore.WebApi.Controllers
     {
         private readonly ILogger<BlogController> _logger;
         private readonly AppDbContext _db;
-        public BlogController(ILogger<BlogController> logger)
+        public BlogController(AppDbContext db,ILogger<BlogController> logger)
         {
-            _db = new AppDbContext();
+           // _db = new AppDbContext();
+            _db = db;
             _logger = logger;
         }
 
@@ -91,8 +93,16 @@ namespace AhThawmDotNetCore.WebApi.Controllers
             item.BlogAuthor = blog.BlogAuthor;
             item.BlogContent = blog.BlogContent;
             int result = _db.SaveChanges();
-            string msg = result > 0 ? "Updating Successful." : "Updating Failed.";
+            string msg = Response(result);
+            //string msg = result > 0 ? "Updating Successful." : "Updating Failed.";
             return Ok(msg);
+        }
+
+        [NonAction]
+        public string Response(int result)
+        {
+            string msg = result > 0 ? "Updating Successful." : "Updating Failed.";
+            return msg;
         }
 
         [HttpDelete ("{id}")]
