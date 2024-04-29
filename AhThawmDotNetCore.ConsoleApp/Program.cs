@@ -16,7 +16,7 @@ using System.Data.SqlClient;
 // F5 => Run
 // Shift + F5 => Stop
 
-// F9 => Preak Point
+// F9 => Break Point
 
 // Ctrl + K, C => Disable
 // Ctrl + K, C => Enable

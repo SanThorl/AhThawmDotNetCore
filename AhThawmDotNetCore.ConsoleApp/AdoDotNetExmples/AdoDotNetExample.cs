@@ -61,7 +61,7 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
 
             //Console.WriteLine("Connection is Opening ...");
             connection.Open();
-           // Console.WriteLine("Connection is Opened.");
+            // Console.WriteLine("Connection is Opened.");
 
             string query = @"SELECT [BlogId]
                                     ,[BlogTitle]
@@ -75,11 +75,11 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
             DataTable dt = new DataTable();
             adapter.Fill(dt);
 
-           // Console.WriteLine("Connection is Closing ...");
+            // Console.WriteLine("Connection is Closing ...");
             connection.Close();
             //Console.WriteLine("Connection is Closed.");
 
-            if(dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found.");
                 return;
@@ -105,7 +105,7 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
 
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
 
-           // Console.WriteLine("Connection is Opening ...");
+            // Console.WriteLine("Connection is Opening ...");
             connection.Open();
             //Console.WriteLine("Connection is Opened.");
 
@@ -121,7 +121,7 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
 
             //Console.WriteLine("Connection is Closing...");
             connection.Close();
-           // Console.WriteLine("Connection is Closed.");
+            // Console.WriteLine("Connection is Closed.");
 
             string msg = result > 0 ? "Saving Successful." : "Saving Failed.";
             Console.WriteLine(msg);
@@ -163,7 +163,7 @@ namespace AhThawmDotNetCore.ConsoleApp.AdoDotNetExmples
             Console.WriteLine(msg);
             #endregion
         }
-            #region Delete
+        #region Delete
         public void Delete(int id)
         {
             Console.WriteLine("Delete");

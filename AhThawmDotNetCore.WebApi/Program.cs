@@ -43,7 +43,9 @@ try
                           policy =>
                           {
                               policy.WithOrigins("https://localhost:7057",
-                                                  "http://localhost:5032");
+                                                  "http://localhost:5032")
+                              .AllowAnyMethod()
+                              .AllowAnyHeader();
                           });
     });
 
