@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AhThawmDotNetCore.ConsoleApp.EFCoreExamples
 {
-    internal class EFCoreExample
+    public class EFCoreExample
     {
         public void Read()
         {
@@ -75,7 +75,7 @@ namespace AhThawmDotNetCore.ConsoleApp.EFCoreExamples
         public void Delete(int id)
         {
             AppDbContext db = new AppDbContext();
-            BlogModel item = db.Blogs.FirstOrDefault(item => item.BlogId == id);
+            BlogModel item = db.Blogs.FirstOrDefault(item => item.BlogId == id)!;
             if (item is null)
             {
                 Console.WriteLine("No Data Found.");

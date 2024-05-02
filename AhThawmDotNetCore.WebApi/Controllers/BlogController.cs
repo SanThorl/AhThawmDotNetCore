@@ -108,7 +108,7 @@ namespace AhThawmDotNetCore.WebApi.Controllers
         [HttpDelete ("{id}")]
         public IActionResult DeleteBlog(int id)
         {
-            BlogModel? item = _db.Blogs.FirstOrDefault(item => item.BlogId == id);
+            BlogModel item = _db.Blogs.FirstOrDefault(item => item.BlogId == id)!;
             if(item is null)
             {
                 return NotFound("No Data Found.");

@@ -98,6 +98,7 @@ namespace AhThawmDotNetCore.ConsoleApp.HttpClientExamples
                 BlogAuthor = author,
                 BlogContent = content
             };
+
             string jsonBlog = JsonConvert.SerializeObject(blog);
             HttpContent httpContent = new StringContent(jsonBlog, Encoding.UTF8, MediaTypeNames.Application.Json);
             string url = $"https://localhost:7079/api/Blog/{id}";

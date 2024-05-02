@@ -51,7 +51,7 @@ namespace DotNetCore.mvcApp.Controllers
             model.Series = lst.Select(X => X.Series).ToList();
             model.Labels = lst.Select(X => X.Month).ToList();
 
-            return View(model  );
+            return View(model);
         }
     }
 }
