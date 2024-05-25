@@ -44,7 +44,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorCli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorClientServer.Shared", "AhThawmDotNetCore.BlazorClientServer\Shared\AhThawmDotNetCore.BlazorClientServer.Shared.csproj", "{E294E87E-13DD-42CD-B48D-05B30441C066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AhThawmDotNetCore.BlazorWasmAppV2", "AhThawmDotNetCore.BlazorWasmAppV2\AhThawmDotNetCore.BlazorWasmAppV2.csproj", "{562F1E28-8507-4BE1-AAF9-70F1FE533693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AhThawmDotNetCore.BlazorWasmAppV2", "AhThawmDotNetCore.BlazorWasmAppV2\AhThawmDotNetCore.BlazorWasmAppV2.csproj", "{562F1E28-8507-4BE1-AAF9-70F1FE533693}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp2", "WinFormsApp2\WinFormsApp2.csproj", "{F9E909B2-E3E3-4D9C-ACF2-C4561B735269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -128,6 +130,10 @@ Global
 		{562F1E28-8507-4BE1-AAF9-70F1FE533693}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{562F1E28-8507-4BE1-AAF9-70F1FE533693}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{562F1E28-8507-4BE1-AAF9-70F1FE533693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E909B2-E3E3-4D9C-ACF2-C4561B735269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E909B2-E3E3-4D9C-ACF2-C4561B735269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E909B2-E3E3-4D9C-ACF2-C4561B735269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E909B2-E3E3-4D9C-ACF2-C4561B735269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

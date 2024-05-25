@@ -49,6 +49,7 @@ try
                           });
     });
 
+
     builder.Host.UseSerilog(); // <-- Add this line
 
     // Add services to the container.

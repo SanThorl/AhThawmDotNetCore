@@ -1,12 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DotNetCore.mvcApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetCore.mvcApp.Controllers
 {
     public class CanvasChartController : Controller
     {
-        public IActionResult BarChart()
+        private readonly AppDbContext _db;
+
+		public CanvasChartController(AppDbContext db)
+		{
+			_db = db;
+		}
+
+		public IActionResult BarChart()
         {
-            return View();
+			List<CanvasBarResponseModel> lst= _db.Bars.Select(x=> new CanvasBarResponseModel
+			{
+				label=x.Country,
+				y= x.GTBRate,
+			}).ToList();
+
+			return View(lst);
         }
     }
 }

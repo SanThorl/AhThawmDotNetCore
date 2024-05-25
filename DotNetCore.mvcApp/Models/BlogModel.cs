@@ -52,4 +52,35 @@ namespace DotNetCore.mvcApp.Models
         public List<int> Series { get; set; }
         public List<string> Labels { get; set; }
     }
+
+    [Table("Tbl_DataPoints")]
+    public class CanvasBarModel
+    {
+        [Key]
+        public int Id { get; set; }
+        public string Country { get; set; }
+
+        public decimal GTBRate { get; set; }
+    }
+    public class CanvasBarResponseModel
+    {
+        public string label { get; set; }
+
+        public decimal y { get; set; }
+    }
+
+    [Table("Tbl_JSBarChart")]
+    public class JSChartModel
+    {
+        [Key]
+        public int Id { get; set; }
+        public string Month { get; set; }
+        public int Points { get; set; }
+    }
+
+    public class JSChartResponseModel
+    {
+        public List<string> Labels { get; set; }
+        public List<int> Series { get; set; }
+    }
 }

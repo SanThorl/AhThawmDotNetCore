@@ -37,4 +37,8 @@ public class AppDbContext : DbContext
     public DbSet<PageStatisticsModel> PageStatistics { get; set; }
 
     public DbSet<RadarModel> Radars { get; set; }
+
+    public DbSet<CanvasBarModel> Bars { get; set; }
+
+    public DbSet<JSChartModel> JSBar { get; set; }
 }

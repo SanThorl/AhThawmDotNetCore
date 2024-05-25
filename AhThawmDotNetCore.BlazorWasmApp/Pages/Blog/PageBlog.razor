@@ -71,7 +71,7 @@ else if(requestModel.BlogId is not null){
     {
         requestModel.BlogId = Guid.NewGuid().ToString();
         Blogs.Add(requestModel);
-        requestModel = new();
+        requestModel = new(); 
     }
 
     private void Edit(string id)
