@@ -1,6 +1,7 @@
-﻿namespace WinFormsApp2
+﻿
+namespace WinFormsApp2
 {
-    partial class Form1
+    partial class Blog
     {
         /// <summary>
         ///  Required designer variable.
@@ -113,7 +114,7 @@
             btnCancel.TabIndex = 8;
             btnCancel.Text = "&Cancel";
             btnCancel.UseVisualStyleBackColor = false;
-            btnCancel.Click += button2_Click;
+            btnCancel.Click += btnCancel_Click;
             // 
             // Form1
             // 
