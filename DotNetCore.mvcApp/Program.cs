@@ -27,9 +27,9 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 ServiceLifetime.Transient);
 
 //builder.Services.AddScoped<AdoDotNetService>();
-builder.Services.AddScoped(n => new AdoDotNetService(builder.Configuration.GetConnectionString("DbConnection")!));
-builder.Services.AddScoped(n => new DapperService(builder.Configuration.GetConnectionString("DbConnection")!));
-builder.Services.AddSingleton<CommonService>();
+//builder.Services.AddScoped(n => new AdoDotNetService(builder.Configuration.GetConnectionString("DbConnection")!));
+//builder.Services.AddScoped(n => new DapperService(builder.Configuration.GetConnectionString("DbConnection")!));
+//builder.Services.AddSingleton<CommonService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

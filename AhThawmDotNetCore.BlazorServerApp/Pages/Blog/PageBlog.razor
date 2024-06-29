@@ -6,15 +6,15 @@
 <PageTitle>PageBlog</PageTitle>
 
 <div class="mb-3">
-    <label class="form-babel">Title</label>
+    <label class="form-label">Title</label>
     <input type="text" class="form-control" @bind-value="requestModel.BlogTitle" />
 </div>
 <div>
-    <label class="form-babel">Author</label>
+    <label class="form-label">Author</label>
     <input type="text" class="form-control" @bind-value="requestModel.BlogAuthor" />
 </div>
 <div>
-    <label class="form-babel">Content</label>
+    <label class="form-label">Content</label>
     <input type="text" class="form-control"  @bind-value="requestModel.BlogContent" />
 </div>
 <button type="button" class="btn btn-dark" @onclick="Cancel">Cancel</button>
@@ -86,7 +86,6 @@
             item.BlogTitle = requestModel.BlogTitle;
             item.BlogAuthor = requestModel.BlogAuthor;
             item.BlogContent = requestModel.BlogContent;
-
         }
 
         await _db.SaveChangesAsync();
