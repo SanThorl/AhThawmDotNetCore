@@ -19,8 +19,8 @@ namespace WinFormsApp2
             try
             {
                 BlogModel blog = new BlogModel();
-                blog.BlogTitle = txtTitle.Text;
-                blog.BlogAuthor = txtAuthor.Text;
+                blog.BlogTitle = txtTitle.Text.Trim();
+                blog.BlogAuthor = txtAuthor.Text.Trim();
                 blog.BlogContent = txtContent.Text;
 
                 int result = _dapperService.Execute(BlogQuery.BlogCreate, blog);
